@@ -16,4 +16,10 @@ export class Order extends Model {
 
   @Column({ allowNull: false, type: DataType.DECIMAL(10, 2) })
   amount: number;
+
+  @Column({ allowNull: false, type: DataType.STRING })
+  name: string;
+
+  @Column({ allowNull: false, type: DataType.STRING })
+  service: string;
 }

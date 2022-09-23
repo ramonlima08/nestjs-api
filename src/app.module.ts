@@ -11,7 +11,7 @@ import { Order } from './orders/entities/order.entity';
     SequelizeModule.forRoot({
       dialect: 'sqlite',
       host: join(__dirname, 'database.sqlite'),
-      autoLoadModels: true,
+      autoLoadModels: false,  //primeira vez rodar com TRUE, depois colocar false
       models: [Order],
     }),
     OrdersModule,

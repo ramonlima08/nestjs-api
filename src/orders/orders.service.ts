@@ -14,6 +14,8 @@ export class OrdersService {
   create(createOrderDto: CreateOrderDto) {
     return this.orderModel.create({
       amount: createOrderDto.amount,
+      name: createOrderDto.name,
+      service: createOrderDto.service
     });
   }
 

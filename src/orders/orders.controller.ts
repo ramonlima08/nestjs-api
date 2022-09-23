@@ -16,13 +16,9 @@ import { UpdateOrderDto } from './dto/update-order.dto';
 export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
+  //Validação individual por verbo
   @Post()
-  create(
-    //Validação individual por verbo
-    //@Body(new ValidationPipe({ errorHttpStatusCode: 422 }))
-    @Body()
-    createOrderDto: CreateOrderDto,
-  ) {
+  create(@Body() createOrderDto: CreateOrderDto) {
     return this.ordersService.create(createOrderDto);
   }
 
